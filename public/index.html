@@ -19,7 +19,14 @@
         })
 
         socket.emit('message',{name:'Agustina'})
-        socket.on('message',function(payload0){
+        socket.on('message',function(payload){
+            console.log(payload)
+        })
+        socket.on('active-todos',function(payload){
+            console.log(payload)
+        })
+
+        socket.on('new-message',function(payload){
             console.log(payload)
         })
     </script>
